@@ -1,6 +1,7 @@
 // Import the Express router to create a new router instance
 const router = require('express').Router();
 
+// Import the user controller
 const {
     getUsers,
     getUser,
