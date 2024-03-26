@@ -2,9 +2,11 @@ const {Schema, model} = require('mongoose');
 const dayjs = require('dayjs');
 const reactionSchema = require('./Reaction');
 
+//formatting the date and time
 const formatDateTime = dt=>{
     return dayjs(dt).format('MMMM Do, YYYY at hh:mm A');
 };
+//capitalize the first letter of the username and lowercase the rest
 const capitalizeUsername = username =>{
     return  username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
 };
