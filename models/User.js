@@ -34,12 +34,12 @@ const userSchema = new Schema({
             message: props => `${props.value} is not a valid email!`
         }
     },
-    thought_ids: [{
+    thoughts: [{
         type:Schema.Types.ObjectId,
         ref: 'thought',
         unique: [true, 'The Thought is already added']
     }],
-    friend_ids: [{
+    friends: [{
         type:Schema.Types.ObjectId,
         ref: 'user',
         unique: [true, 'The Friend is already added']
@@ -49,7 +49,7 @@ const userSchema = new Schema({
     virtuals:{
         friendCount:{ 
             get(){
-                return this.friend_ids.length;
+                return this.friends.length;
             }
         }
     },

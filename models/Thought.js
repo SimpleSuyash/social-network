@@ -1,10 +1,15 @@
 const {Schema, model} = require('mongoose');
 const dayjs = require('dayjs');
+//importing the advanced format plugin
+var AdvancedFormat = require('dayjs/plugin/advancedFormat');
+
 const reactionSchema = require('./Reaction');
+//using the advanced format plugin
+dayjs.extend(AdvancedFormat);
 
 //formatting the date and time
 const formatDateTime = dt=>{
-    return dayjs(dt).format('MMMM Do, YYYY at hh:mm A');
+    return dayjs(dt).format('MMM Do, YYYY [at] hh:mm a');
 };
 //capitalize the first letter of the username and lowercase the rest
 const capitalizeUsername = username =>{
