@@ -1,5 +1,6 @@
 const {Schema, model} = require('mongoose');
 
+//capitalize the first letter of the username and lowercase the rest
 const capitalizeUsername = username =>{
     return  username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
 };
@@ -45,19 +46,19 @@ const userSchema = new Schema({
     }]
 },
 {
-    toJSON:{
-        getters: true
-    },
-},
-{
-    virtuals: {
-        friendCount: {
+    virtuals:{
+        friendCount:{ 
             get(){
                 return this.friend_ids.length;
             }
         }
-    }
-});
+    },
+    toJSON:{
+        virtuals: true,
+    },
+    id: false
+}
+);
 /*
 userSchema.pre("save", function(next){
     username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
