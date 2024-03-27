@@ -17,9 +17,9 @@ With the help of any API client, such as Postman, etc, this app allows us to vie
 Similarly, it lets us get all thought posts, get a particular thought post, add a new thought post, update and delete an existing thought post. We also can add a reaction and delete a particular reaction related to the thought post.
 
 The thought posts and reactions are related to corresponding user record as the creater of the post and reactor to the post respectively. 
-![User routes](image.png)
+![User routes](./assets/images/image.png)
 
-![Thought routes](image-1.png)
+![Thought routes](./assets/images/image-1.png)
 
 By creating this project, I learnt `mongoose`. Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB. The problem that Mongoose aims to solve is allowing developers to enforce a specific schema at the application layer.
 
@@ -74,7 +74,7 @@ Having learnt relational database management system such as `MySQL` earlier in t
         ```
 
 And the `package.json` file should look like below:              
-![package.json](image-2.png)
+![package.json](./assets/images/image-2.png)
 
 ## Usage
 If you wish to use this repo,
@@ -102,13 +102,13 @@ This app is licensed under [**WTFPL**](http://www.wtfpl.net/about/)
 ## Screenshots
 
 Screenshot showing the get all users endpoint 
-![Get All Users Route](image-3.png)
+![Get All Users Route](./assets/images/image-3.png)
 
 Screenshot showing the get single user endpoint
-![Get Single User Route](image-4.png)
+![Get Single User Route](./assets/images/image-4.png)
 
 Screenshot showing the get all thoughts endpoint
-![Get All Thoughts Route](image-5.png)
+![Get All Thoughts Route](./assets/images/image-5.png)
 
 ## Demo
 
