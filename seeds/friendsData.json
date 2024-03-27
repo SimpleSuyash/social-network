@@ -1,0 +1,74 @@
+[
+    {
+        "username": "exiled_prince111",
+        "friends": [
+            "informant463676268",
+            "royal_the_loyal247",
+            "silly7_sally77"
+        ]
+    },
+    {
+        "username": "youngwarlord3",    
+        "friends": [
+            "silly7_sally77",
+            "royal_the_loyal247",
+            "informant463676268",
+            "simplesuyash"
+        ]
+    },
+    {
+        "username": "imprincess_snow143",
+        "friends": [
+            "silly7_sally77",
+            "royal_the_loyal247",
+            "informant463676268",
+            "simplesuyash"
+        ]
+    },
+    {
+        "username": "sirgallant_7",
+        "friends": [
+            "royal_the_loyal247",
+            "informant463676268",
+            "simplesuyash"
+        ]
+    },
+    {
+        "username": "silly7_sally77",
+        "friends": [
+            "exiled_prince111",
+            "youngwarlord3",
+            "imprincess_snow143"
+        ]
+    },
+    {
+        "username": "royal_the_loyal247",
+        "friends": [
+            "exiled_prince111",
+            "sirgallant_7",
+            "imprincess_snow143",
+            "sirgallant_7",
+            "simplesuyash"
+        ]
+    },
+    {
+        "username":"simplesuyash",
+        "friends": [
+            "youngwarlord3",
+            "sirgallant_7",
+            "imprincess_snow143",
+            "royal_the_loyal247",
+            "informant463676268"
+        ]
+    },
+    {
+        "username": "informant463676268",
+        "friends": [
+            "exiled_prince111",
+            "sirgallant_7",
+            "imprincess_snow143",
+            "youngwarlord3",
+            "simplesuyash"
+        ]
+    }
+]

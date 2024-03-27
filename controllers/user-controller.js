@@ -17,7 +17,8 @@ const getUser = async(req, res) => {
     try {
         const userData = await User.findById({ _id: req.params.userId })
         .select('-__v')
-        .populate('thoughts');
+        .populate('thoughts')
+        .populate('friends');
         res.json(userData);
     } catch (err) {
         console.log(err.message);
@@ -78,9 +79,13 @@ const deleteUser = async(req, res) => {
     }
 };
 
-//creating a new friend
+//adding a new friend
+//creates a friendship between two users
+//adds the friend to the user's friend list
+//also adds the user to the friend's friend list
 const addFriend = async(req, res) => {
     try {
+        //adding a friend to the user
         const userData = await User.findByIdAndUpdate(
             { _id: req.params.userId },
             { $addToSet: { friends: req.params.friendId } },
@@ -89,7 +94,17 @@ const addFriend = async(req, res) => {
         if(!userData) {
             return res.status(404).json({ message: 'No user found with this id!' });
         }
-        res.json(userData);
+
+        //adding the user as a friend to the friend
+        const friendData = await User.findByIdAndUpdate(
+            { _id: req.params.friendId },
+            { $addToSet: { friends: req.params.userId } },
+            { new: true, runValidators: true }
+        );
+        if(!friendData) {
+            return res.status(404).json({ message: 'No user found with this id!' });
+        }
+        res.json({userData, friendData});
     } catch (err) {
         console.log(err.message);
         res.status(500).json(err.message);
@@ -102,7 +117,7 @@ const deleteFriend = async(req, res) => {
         const userData = await User.findByIdAndUpdate(
             { _id: req.params.userId },
             { $pull: { friends: req.params.friendId } },
-            { new: true, runValidators: true }
+            { new: true}
         );
         if(!userData) {
             return res.status(404).json({ message: 'No user found with this id!' });

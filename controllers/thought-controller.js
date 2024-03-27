@@ -28,17 +28,17 @@ const getThought = async(req, res) => {
 const createThought = async(req, res) => { 
     try {
         const thoughtData = await Thought.create(req.body);
-        const userData = await User.findByIdAndUpdate(
-            req.body.userId,
+        const userData = await User.findOneAndUpdate(
+            {username: req.body.username},
             { $addToSet: { thoughts: thoughtData._id } },
-            { new: true }
+            { new: true, runValidators: true}
         );
         if(!userData) {
             return res.status(404).json(
                 { message: 'Thought created, but found no user with this id!' }
             );
         }
-        res.json(thoughtData);
+        res.json({thoughtData, userData});
     } catch (err) {
         console.log(err.message);
         res.status(500).json(err.message);
@@ -115,8 +115,8 @@ const deleteReaction = async(req, res) => {
     try {
         const thoughtData = await Thought.findByIdAndUpdate(
             { _id: req.params.thoughtId },
-            { $pull: { reactions: { reactionId: req.body.reactionId } } },
-            { new: true, runValidators: true}
+            { $pull: { reactions: { reactionId: req.params.reactionId } } },
+            { new: true}
         );
         if(!thoughtData) {
             return res.status(404).json({ message: 'No thought found with this id!' });
