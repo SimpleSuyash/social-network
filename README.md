@@ -12,13 +12,14 @@ This app lets users test various APIs of a social network website.
 
 ##  Description
 
-With the help of any API client, such as Postman, etc, this app allows us to view the social network site's all users, view a detail information of a particular user, add a new user, delete and update an existing user. Also, it allows us to add a new friend to and to delete an existing friend from the friend's list of an user. 
+With the help of any API client, such as Postman, etc, this app allows us to view a social network site's all users, view a detail information of a particular user, add a new user, delete and update an existing user. Also, it allows us to add a new friend to and delete an existing friend from the friend's list of an user. 
 
 Similarly, it lets us get all thought posts, get a particular thought post, add a new thought post, update and delete an existing thought post. We also can add a reaction and delete a particular reaction related to the thought post.
 
 The thought posts and reactions are related to corresponding user record as the creater of the post and reactor to the post respectively. The endpoints are shown below in the pictures: 
 
 ![User routes](./assets/images/image.png)
+
 
 ![Thought routes](./assets/images/image-1.png)
 
