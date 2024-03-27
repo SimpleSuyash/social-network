@@ -25,7 +25,7 @@ The thought posts and reactions are related to corresponding user record as the 
 
 By creating this project, I learnt `mongoose`. Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB. The problem that Mongoose aims to solve is allowing developers to enforce a specific schema at the application layer.
 
-Having learnt relational database management system such as `MySQL` earlier in the course, I was used to storing data using tables and rows, where referential integrity is enforced. Though this project, I got to learn a non-relational way of storing data, in this case, in a series of JSON like documents, which are called  binary JSON, or `BSON` in short. 
+Having learnt relational database management system such as `MySQL` earlier in the course, I was used to storing data using tables and rows, where referential integrity is enforced. Through this project, I got to learn a non-relational way of storing data, in this case, in a series of JSON like documents, which are called  binary JSON, or `BSON` in short. 
 
 
 ## Table of Contents
