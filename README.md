@@ -121,3 +121,9 @@ Screenshot showing the get all thoughts endpoint
 https://github.com/SimpleSuyash/social-network-api/assets/149545043/63a75c4a-b558-4e24-a06e-3b00b209c99a
 
 
+https://github.com/SimpleSuyash/social-network-api/assets/149545043/847f5e6a-ab3c-43ef-b236-c661d74b324e
+
+
+
+
+
