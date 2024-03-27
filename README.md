@@ -34,7 +34,7 @@ Having learnt relational database management system such as `MySQL` earlier in t
 1. [Usage](#usage)
 1. [Licence](#licence)
 1. [Screenshots](#screenshots)
-1. [Demo](#demo)
+1. [Walkthrough Video](#walkthroughvideo)
 
 
 ## Installation 
@@ -115,8 +115,8 @@ Screenshot showing the get all thoughts endpoint
 
 ![Get All Thoughts Route](./assets/images/image-5.png)
 
-## Demo
 
+## Walkthrough Video
 
 https://github.com/SimpleSuyash/social-network-api/assets/149545043/63a75c4a-b558-4e24-a06e-3b00b209c99a
 
