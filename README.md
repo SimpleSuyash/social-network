@@ -34,7 +34,7 @@ Having learnt relational database management system such as `MySQL` earlier in t
 1. [Usage](#usage)
 1. [Licence](#licence)
 1. [Screenshots](#screenshots)
-1. [Walkthrough Video](#walkthroughvideo)
+1. [Walkthrough Video](#walkthrough%20video)
 
 
 ## Installation 
