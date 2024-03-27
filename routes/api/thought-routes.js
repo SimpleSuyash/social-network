@@ -26,6 +26,9 @@ router.route('/:thoughtId')
 // The `/api/thoughts/:thoughtId/reactions` endpoint
 router.route('/:thoughtId/reactions')
     .post(addReaction)
+
+// The `/api/thoughts/:thoughtId/reactions/:reactionId` endpoint
+router.route('/:thoughtId/reactions/:reactionId')
     .delete(deleteReaction);
 
 
