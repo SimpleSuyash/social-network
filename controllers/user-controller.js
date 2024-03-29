@@ -111,9 +111,11 @@ const addFriend = async(req, res) => {
     }
 };
 
-//deleting a friend
+//removes the friend from the user's friend list
+//also removes the user from the friend's friend list
 const deleteFriend = async(req, res) => {
     try {
+        //removing the friend from the user's friend list
         const userData = await User.findByIdAndUpdate(
             { _id: req.params.userId },
             { $pull: { friends: req.params.friendId } },
@@ -122,7 +124,17 @@ const deleteFriend = async(req, res) => {
         if(!userData) {
             return res.status(404).json({ message: 'No user found with this id!' });
         }
-        res.json(userData);
+        //removing the user from the friend's friend list
+        const friendData = await User.findByIdAndUpdate(
+            { _id: req.params.friendId },
+            { $pull: { friends: req.params.userId } },
+            { new: true}
+        );
+        if (!friendData) {
+            return res.status(404).json({ message: 'No user found with this id!' });
+        };
+
+        res.json({userData, friendData});
     } catch (err) {
         console.log(err.message);
         res.status(500).json(err.message);
